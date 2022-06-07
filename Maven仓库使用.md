@@ -12,6 +12,18 @@ guide-maven-remote
 guide-maven-virtual  
 * ### 创建 guide-maven-dev-local 仓库  
   Admin--Repositories--Local
-
+  点击右上角 "New"
+  选择 "Maven" 类型
+  填写仓库名 "guide-maven-dev-local", 保存
 * ### 创建 guide-maven-remote 仓库  
+  Admin--Repositories--Remote
+  点击右上角 "New"
+  选择 "Maven" 类型
+  填写仓库名 "guide-maven-remote", URL保持默认，保存
 * ### 创建 guide-maven-virtual 仓库  
+  Admin--Repositories--Virtual
+  点击右上角 "New"
+  选择 "Maven" 类型
+  填写仓库名 "guide-maven-virtual", 并将上面刚创建的2个仓库拖动至右侧，保存
+##  解析依赖  
+##  上传制品  
