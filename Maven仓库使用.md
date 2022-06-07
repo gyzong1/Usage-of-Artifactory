@@ -11,9 +11,11 @@ guide-maven-dev-local
 guide-maven-remote  
 guide-maven-virtual  
 * ### 创建 guide-maven-dev-local 仓库  
-  Admin--Repositories--Local
+  Settings--Repositories--Local
   点击右上角 "New"
+  <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-1.png">
   选择 "Maven" 类型
+
   填写仓库名 "guide-maven-dev-local", 保存
 * ### 创建 guide-maven-remote 仓库  
   Admin--Repositories--Remote
