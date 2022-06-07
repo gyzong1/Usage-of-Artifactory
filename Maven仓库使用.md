@@ -41,17 +41,18 @@ webinar-maven-virtual
 点击 "Download Snippet"，下载 settings.xml，并替换 Maven 中现有 settings.xml 配置  
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-8.png">  
 2\)  下载示例代码，进入示例项目目录，运行编译构建  
-```
+```bash
 git clone https://github.com/JFrog/project-examples.git
 cd project-examples/maven-example
 # 编译构建
 mvn clean install
 ```
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-9.png">  
-##  上传制品  
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-9.png">    
+
+##  上传制品(Deploy)  
 同上，点击 "Set Me Up"，选择 Maven Local 仓库 "webinar-maven-local"，点击 "Deploy"，将生成的配置复制到 pom.xml 文件中  
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-10.png">  
-```
+```bash
 mvn deploy
 ```
 ##  查看 Artifactory 中缓存的第三方依赖包和上传的制品包  
