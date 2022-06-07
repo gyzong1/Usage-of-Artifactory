@@ -31,5 +31,12 @@ webinar-maven-virtual
   填写仓库名 "webinar-maven-virtual", 并将上面刚创建的2个仓库拖动至右侧，保存
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-5.png">
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-6.png">
-##  解析依赖  
+##  解析依赖(Resolve)  
+1\)  Artifactory--Artifacts--Set Me Up  
+"Package Type": 选择 "Maven" 类型  
+"Repository": "webinar-maven-virtual"
+"Configure": 填写当前用户密码，点击小锁按钮，选择用于解析依赖的仓库 "webinar-maven-virtual"  
+点击 "Generate Settings", 生成配置文件
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-7.png">
+2\)  
 ##  上传制品  
