@@ -11,12 +11,12 @@ webinar-maven-dev-local
 webinar-maven-remote  
 webinar-maven-virtual  
 * ### 创建 webinar-maven-dev-local 仓库  
-  Settings--Repositories
-  点击右上角 "+ Add Repositories" -- "Local Repository"
+  Settings--Repositories  
+  1) 点击右上角 "+ Add Repositories" -- "Local Repository"
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-1.png">
-  选择 "Maven" 类型
+  2) 选择 "Maven" 类型
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-2.png">
-  填写仓库名 "webinar-maven-dev-local", 保存
+  3) 填写仓库名 "webinar-maven-dev-local", 保存
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-3.png">
 * ### 创建 webinar-maven-remote 仓库  
   Admin--Repositories--Remote
