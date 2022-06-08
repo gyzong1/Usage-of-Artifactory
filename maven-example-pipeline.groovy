@@ -6,7 +6,6 @@ node {
   
   stage ('Clone') {
         git url: 'https://github.com/JFrog/project-examples.git'
-        // git url: 'https://gitee.com/gyzong1/project-examples.git'
     }
 
     stage ('Artifactory configuration') {
