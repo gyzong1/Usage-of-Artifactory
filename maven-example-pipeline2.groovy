@@ -69,7 +69,7 @@ file_contents = '''
                 rtMaven.deployer server: artiServer,
                                  releaseRepo: DEPLOY_RELEASE_REPO,
                                  snapshotRepo: DEPLOY_SNAPSHOT_REPO
-                rtMaven.tool = 'maven'
+                rtMaven.tool = 'maven3'
             }
 
             stage('SCM') {
