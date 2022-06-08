@@ -52,9 +52,11 @@ mvn clean install
 ##  上传制品(Deploy)  
 同上，点击 "Set Me Up"，选择 Maven Local 仓库 "webinar-maven-local"，点击 "Deploy"，将生成的配置复制到 pom.xml 文件中  
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-10.png">  
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-11.png">  
 ```bash
 mvn deploy
 ```
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-12.png">   
 ##  查看 Artifactory 中缓存的第三方依赖包和上传的制品包  
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-11.png">
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-12.png">
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-13.png">
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-14.png">
