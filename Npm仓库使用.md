@@ -37,7 +37,7 @@ Artifactory--Artifacts--Set Me Up
 "Repository": "webinar-npm-virtual"  
 "Configure": 填写当前用户密码，点击小锁按钮，选择用于解析依赖的仓库 "webinar-npm-virtual"    
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-7.png">  
-复制 npm config 和 npm login 命令，在服务器上执行  
+复制 npm config 和 "Using basic authentication" 认证信息，在服务器上执行并填入~/.npmrc文件  
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-8.png">  
 ##  解析依赖(Resolve) 
 下载示例代码，进入示例项目目录，运行编译构建  
@@ -52,9 +52,10 @@ npm install
 ##  上传制品(Deploy)  
 同上，点击 "Set Me Up"，选择 Npm Local 仓库 "webinar-npm-local"，点击 "Deploy"，复制 npm publish 命令
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-10.png">  
-在服务器上执行  
+在服务器上执行，如：  
 ```bash
-npm publish *****
+cd node_modules/ms/
+npm publish --registry http://192.168.56.11:8081/artifactory/api/npm/webinar-npm-dev-local/
 ```
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-11.png">  
 ##  查看 Artifactory 中缓存的第三方依赖包和上传的制品包  
