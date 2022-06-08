@@ -31,26 +31,26 @@ webinar-npm-virtual
   填写仓库名 "webinar-npm-virtual", 并将上面刚创建的2个仓库拖动至右侧，保存
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-5.png">
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-6.png">
-##  解析依赖(Resolve)  
-1\)  Artifactory--Artifacts--Set Me Up  
+##  获取 Npm 配置  
+Artifactory--Artifacts--Set Me Up  
 "Package Type": 选择 "Npm" 类型  
 "Repository": "webinar-npm-virtual"  
-"Configure": 填写当前用户密码，点击小锁按钮，选择用于解析依赖的仓库 "webinar-maven-virtual"    
-点击 "Generate Settings"， 生成配置文件  
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-7.png">  
-点击 "Download Snippet"，下载 settings.xml，并替换 Maven 中现有 settings.xml 配置  
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-8.png">  
-2\)  下载示例代码，进入示例项目目录，运行编译构建  
+"Configure": 填写当前用户密码，点击小锁按钮，选择用于解析依赖的仓库 "webinar-npm-virtual"    
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-7.png">  
+复制 npm config 和 npm login 命令，在服务器上执行  
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-8.png">  
+##  解析依赖(Resolve) 
+下载示例代码，进入示例项目目录，运行编译构建  
 ```bash
 git clone https://github.com/JFrog/project-examples.git
-cd project-examples/maven-examples/maven-example
+cd project-examples/npm-example
 # 编译构建
-mvn clean install
+npm install
 ```
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-9.png">    
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-9.png">    
 
 ##  上传制品(Deploy)  
-同上，点击 "Set Me Up"，选择 Maven Local 仓库 "webinar-maven-local"，点击 "Deploy"，将生成的配置复制到 pom.xml 文件中  
+同上，点击 "Set Me Up"，选择 Npm Local 仓库 "webinar-npm-local"，点击 "Deploy"，将生成的配置复制到 pom.xml 文件中  
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-10.png">  
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-11.png">  
 ```bash
