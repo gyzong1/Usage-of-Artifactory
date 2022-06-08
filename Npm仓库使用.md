@@ -57,7 +57,7 @@ npm install
 cd node_modules/ms/
 npm publish --registry http://192.168.56.11:8081/artifactory/api/npm/webinar-npm-dev-local/
 ```
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-11.png">  
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-11.png">    
 ##  查看 Artifactory 中缓存的第三方依赖包和上传的制品包  
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-12.png">
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-13.png">
