@@ -47,8 +47,8 @@ docker pull 192.168.56.11:8082/webinar-docker-virtual/busybox
 docker tag 192.168.56.11:8082/webinar-docker-virtual/busybox 192.168.56.11:8082/webinar-docker-dev-local/busybox:v1
 docker push 192.168.56.11:8082/webinar-docker-dev-local/busybox:v1
 ```
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-10.png">   
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Docker-10.png">   
 
 ##  查看 Artifactory 中缓存和上传的镜像  
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-11.png">
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-12.png">
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Docker-11.png">
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Docker-12.png">
