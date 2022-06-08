@@ -5,15 +5,15 @@ node {
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo = Artifactory.newBuildInfo()
     def descriptor = Artifactory.mavenDescriptor()
-    def ARTIFACTORY_URL = 'http://192.168.230.155:8081/artifactory/'
-    def ARTIFACTORY_API_KEY = 'AKCp5ccv3oMbQuovKWLzCdRW2RnZW9Qb4agjxVA931J9SsJwwkEuAe1yknQtMBegJvDq8RSr8'
-    def RESOLVE_SNAPSHOT_REPO = 'maven-virtual'
-    def RESOLVE_RELEASE_REPO = 'maven-virtual'
-    def DEPLOY_SNAPSHOT_REPO = 'maven-dev-local'
-    def DEPLOY_RELEASE_REPO = 'maven-dev-local'
+    def ARTIFACTORY_URL = 'http://192.168.56.11:8081/artifactory/'
+    def ARTIFACTORY_API_KEY = 'AKCp8mZ8SgvDdPYDsYSVj51SuUaFhJxBB73mz7UcjwLy9EXVHdtP7Go1i2fW6PAQmT1cAdGZt'
+    def RESOLVE_SNAPSHOT_REPO = 'webinar-maven-virtual'
+    def RESOLVE_RELEASE_REPO = 'webinar-maven-virtual'
+    def DEPLOY_SNAPSHOT_REPO = 'webinar-maven-dev-local'
+    def DEPLOY_RELEASE_REPO = 'webinar-maven-dev-local'
 
-    def PROMOTION_SOURCE_REPO = 'maven-dev-local'
-    def PROMOTION_TARGET_REPO = 'maven-pro-local'
+    def PROMOTION_SOURCE_REPO = 'webinar-maven-dev-local'
+    def PROMOTION_TARGET_REPO = 'webinar-maven-pro-local'
 
     //maven
     def MAVEN_TOOL = 'maven'
@@ -27,7 +27,7 @@ node {
  //   def GIT_CREDENTIALS_ID = 'my-git-hub'
 
     //sonar
-    def SONAR_HOST_URL = 'http://192.168.230.158:9000'
+    def SONAR_HOST_URL = 'http://192.168.56.11:9000'
     def SONAR_SERVER = 'sonarqube'
     def SONAR_SCANNER_TOOL = 'sonar-scanner-3.3.0'
     def SONAR_PROJECT_KEY = "${JOB_NAME}"
