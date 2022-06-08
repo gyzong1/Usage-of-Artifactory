@@ -20,9 +20,9 @@ webinar-npm-virtual
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-3.png">
 * ### 创建 webinar-npm-remote 仓库  
   Settings--Repositories  
-  1\) 同上，点击右上角 "+ Add Repositories" -- "Remote Repository"
-  2\) 选择 "Npm" 类型
-  3\) 填写仓库名 "webinar-npm-remote", URL保持默认，保存
+  1\) 同上，点击右上角 "+ Add Repositories" -- "Remote Repository"  
+  2\) 选择 "Npm" 类型  
+  3\) 填写仓库名 "webinar-npm-remote", URL保持默认，保存  
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-4.png">
 * ### 创建 webinar-npm-virtual 仓库  
   Settings--Repositories  
