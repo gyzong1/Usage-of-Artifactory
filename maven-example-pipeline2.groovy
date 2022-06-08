@@ -20,11 +20,9 @@ node {
     def MAVEN_GOALS = 'clean install'
     def POM_PATH = 'project-examples/maven-example/pom.xml'
 
-    //git
-    // def GIT_URL = 'https://gitee.com/gyzong1/pipeline-example.git'  
+    //git  
     def GIT_URL = 'https://github.com/gyzong1/pipeline-example.git'
     def BRANCH = 'master'
- //   def GIT_CREDENTIALS_ID = 'my-git-hub'
 
     //sonar
     def SONAR_HOST_URL = 'http://192.168.56.11:9000'
@@ -50,15 +48,6 @@ file_contents = '''
 }
 '''    
 
-    //docker
-    //def DOCKER_IMAGE_NAME = 'java-mvn-sonar-tomcat' 
-    //def DOCKER_IMAGE_TAG = 'latest'
-
-
-    // docker.image('java-mvn-sonar-tomcat').inside("--name ${DOCKER_CONTAINER_NAME}"){
-
-//        withEnv(["JAVA_HOME=${ tool 'env-docker-maven-jdk-1.8.0_191' }", "MAVEN_HOME=${tool 'env-docker-maven-maven-3.3.9'}", "PATH+MAVEN=${env.MAVEN_HOME}/bin:${env.JAVA_HOME}/bin"]) {
-
             //环境配置
             stage('Prepare') {
 
@@ -78,13 +67,13 @@ file_contents = '''
                     changelog: true
                  //   credentialsId: GIT_CREDENTIALS_ID
             }
-
+	
             stage('env capture') {
                 echo "收集系统变量"
                 buildInfo.env.capture = true
             }
             
-            /*
+            
             //Sonar 静态代码扫描
             stage('Sonar') {
                 // Sonar scan
@@ -96,17 +85,9 @@ file_contents = '''
             sleep 5
             //添加sonar扫描结果到包上
             stage("Sonar Quality Gate") {
-                //timeout(time: 1, unit: 'HOURS') {
-                //timeout(time: 5, unit: 'MINUTES') {
-                    // Just in case something goes wrong, pipeline will be killed after a timeout
-                //    def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
-                //    if (qg.status != 'OK') {
-                //        error "Pipeline aborted due to quality gate failure: ${qg.status}"
-                //    } else {
-                        
                         //获取sonar扫描结果
                         def surl="${SONAR_HOST_URL}/api/measures/component?componentKey=${SONAR_PROJECT_KEY}&metricKeys=alert_status,quality_gate_details,coverage,new_coverage,bugs,new_bugs,reliability_rating,vulnerabilities,new_vulnerabilities,security_rating,sqale_rating,sqale_index,sqale_debt_ratio,new_sqale_debt_ratio,duplicated_lines_density&additionalFields=metrics,periods"
-                        def response=httpRequest authentication: "sonar", consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', ignoreSslErrors: true, url: surl
+                        def response=httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', ignoreSslErrors: true, url: surl
                         def propssonar = readJSON text: response.content
                         if (propssonar.component.measures) {
                             propssonar.component.measures.each{ measure ->
@@ -118,14 +99,11 @@ file_contents = '''
                                 }
                                 rtMaven.deployer.addProperty("sonar.quality.${measure.metric}", val)
                             }
-                 //       }
                         //增加sonar扫描结果到artifactory 
-                        rtMaven.deployer.addProperty("qulity.gate.sonarUrl", SONAR_HOST_URL + "/dashboard/index/" + SONAR_PROJECT_KEY)
-                        
+                        rtMaven.deployer.addProperty("qulity.gate.sonarUrl", SONAR_HOST_URL + "/dashboard/index/" + SONAR_PROJECT_KEY)      
                     }
-            //    }
             }
-*/
+
             stage('add jiraResult') {
                 def requirements = getRequirementsIds();
                 echo "requirements : ${requirements}"
@@ -151,8 +129,6 @@ file_contents = '''
             stage('basic test') {
                 echo "add test step"
             }
-    
-
     
             stage("JUnit test") {
             //解析测试报告 
@@ -192,8 +168,6 @@ file_contents = '''
                         consoleLogResponseBody: true, 
                         customHeaders: [[name: 'X-JFrog-Art-Api', value: ARTIFACTORY_API_KEY]],
                         url: "${ARTIFACTORY_URL}api/storage/${PROMOTION_SOURCE_REPO}/${pom.parent.groupId.replace(".","/")}/${pom.artifactId}/${pom.parent.version}/${pom.artifactId}-${warLatestVersion}.war?properties=passRate=${passRate};totalCases=${totalCases}"
-
-
             }
     
             /*
@@ -208,7 +182,6 @@ file_contents = '''
             }
             */
             
- 
              // sync: 拷贝符合质量关卡的包到指定仓库
              stage('sync') {
 					write_file_path = "./sync.spec"
@@ -236,7 +209,7 @@ file_contents = '''
                 artiServer.promote promotionConfig
             }
     */
-            //进行部署(ansible)
+            //部署(ansible)
             /*
             stage('deploy') {
                 def pom = readMavenPom file: 'project-examples/maven-example/multi3/pom.xml'
@@ -267,7 +240,7 @@ file_contents = '''
             }
             */
     
-            //进行部署
+            //部署
             /*
             stage('deploy') {
                 def pom = readMavenPom file: 'maven-example/multi3/pom.xml'
