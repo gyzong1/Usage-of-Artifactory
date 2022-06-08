@@ -43,7 +43,7 @@ webinar-maven-virtual
 2\)  下载示例代码，进入示例项目目录，运行编译构建  
 ```bash
 git clone https://github.com/JFrog/project-examples.git
-cd project-examples/maven-example
+cd project-examples/maven-examples/maven-example
 # 编译构建
 mvn clean install
 ```
