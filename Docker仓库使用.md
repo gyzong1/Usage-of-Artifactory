@@ -26,9 +26,9 @@ webinar-docker-virtual
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Docker-4.png">
 * ### 创建 webinar-docker-virtual 仓库  
   Settings--Repositories  
-  1\) 同上，点击右上角 "+ Add Repositories" -- "Virtual Repository"
-  2\) 选择 "Docker" 类型  
-  填写仓库名 "webinar-docker-virtual", 并将上面刚创建的2个仓库拖动至右侧，保存
+  1\) 同上，点击右上角 "+ Add Repositories" -- "Virtual Repository"  
+  2\) 选择 "Docker" 类型    
+  填写仓库名 "webinar-docker-virtual", 并将上面刚创建的2个仓库拖动至右侧，保存  
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Docker-5.png">
   <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Docker-6.png">
 ##  获取 Docker 配置  
