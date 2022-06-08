@@ -50,13 +50,13 @@ npm install
 <img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-9.png">    
 
 ##  上传制品(Deploy)  
-同上，点击 "Set Me Up"，选择 Npm Local 仓库 "webinar-npm-local"，点击 "Deploy"，将生成的配置复制到 pom.xml 文件中  
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-10.png">  
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-11.png">  
+同上，点击 "Set Me Up"，选择 Npm Local 仓库 "webinar-npm-local"，点击 "Deploy"，复制 npm publish 命令
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-10.png">  
+在服务器上执行  
 ```bash
-mvn deploy
+npm publish *****
 ```
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-12.png">   
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-11.png">  
 ##  查看 Artifactory 中缓存的第三方依赖包和上传的制品包  
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-13.png">
-<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Maven-14.png">
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-12.png">
+<img width="1751" alt="image" src="https://github.com/gyzong1/Usage-of-Artifactory/blob/main/images/Npm-13.png">
