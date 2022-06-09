@@ -31,22 +31,22 @@ node {
     def SONAR_PROJECT_KEY = "${JOB_NAME}"
     def SONAR_SOURCES = 'project-examples/maven-example/multi3/src'
     
-// 定义质量关卡    
-file_contents = '''
-{
-  "files": [
+    // 定义质量关卡    
+    file_contents = '''
     {
-      "aql": {
-        "items.find": {
-         "repo": "webinar-maven-dev-local",
-         "@test" : {"$eq" : "ok"}
+      "files": [
+        {
+          "aql": {
+            "items.find": {
+             "repo": "webinar-maven-dev-local",
+             "@sonar.quality.alert_status" : {"$eq" : "OK"}
+            }
+          },
+          "target": "webinar-maven-stage-local/"
         }
-      },
-      "target": "webinar-maven-stage-local/"
+      ]
     }
-  ]
-}
-'''    
+    '''    
 
             //环境配置
             stage('Prepare') {
@@ -60,14 +60,14 @@ file_contents = '''
                                  snapshotRepo: DEPLOY_SNAPSHOT_REPO
                 rtMaven.tool = 'maven3'
             }
-
+/*
             stage('SCM') {
                 git url: GIT_URL, 
                     branch: BRANCH, 
                     changelog: true
                  //   credentialsId: GIT_CREDENTIALS_ID
             }
-	
+*/	
             stage('env capture') {
                 echo "收集系统变量"
                 buildInfo.env.capture = true
