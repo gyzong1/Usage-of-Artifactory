@@ -38,11 +38,11 @@ file_contents = '''
     {
       "aql": {
         "items.find": {
-         "repo": "maven-dev-local",
+         "repo": "webinar-maven-dev-local",
          "@test" : {"$eq" : "ok"}
         }
       },
-      "target": "maven-stage-local/"
+      "target": "webinar-maven-stage-local/"
     }
   ]
 }
